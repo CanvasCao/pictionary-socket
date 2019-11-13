@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 13px Helvetica, Arial;
+}
+
+#title {
+    margin: 30px auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+#canvas {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #c1c1c1;
+}
