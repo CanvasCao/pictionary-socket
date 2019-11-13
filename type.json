@@ -1,0 +1,7 @@
+{
+  "chat_message": "chat_message",
+  "add_user": "add_user",
+  // first time connect to server add name to socket
+  "user_joined": "user_joined",
+  "user_left": "user_left"
+}

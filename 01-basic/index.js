@@ -9,10 +9,10 @@ app.get('/', function (req, res) {
 io.on('connection', function (socket) {
     socket.on('chat message', function (msg) {
         console.log(msg)
-        //without him
+        // without him
         // socket.broadcast.emit('chat message', msg)
 
-        //to everyone
+        // to everyone
         // io.emit('chat message', msg)
     })
 
