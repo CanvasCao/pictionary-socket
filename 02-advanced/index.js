@@ -33,16 +33,17 @@ io.on('connection', function (socket) {
     })
 
     socket.on('chat_message', function (msg) {
-        io.emit('chat_message', {
-            username: socket.username,
-            message: msg
-        })
+        if (socket.username) {
+            io.emit('chat_message', {
+                username: socket.username,
+                message: msg
+            })
+        }
     })
 
     socket.on('disconnect', function () {
-        if (addedUser && numUsers <= 1) {
+        if (addedUser && numUsers > 0) {
             numUsers--
-
             socket.broadcast.emit('user_left', {
                 username: socket.username,
                 numUsers: numUsers

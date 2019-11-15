@@ -30,7 +30,6 @@ $(function () {
     })
 
     socket.on('user_left', function (data) {
-        console.log(socket.username)
         $('#messages').append($('<li>').text(
             `${data.username} left, we have ${data.numUsers} users in the room`)
         )

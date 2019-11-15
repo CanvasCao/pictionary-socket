@@ -45,8 +45,6 @@ $(function () {
     }
 
     // Send data to server.................................................
-
-    // Tell the server your username
     function emit_drawing({ox, oy, x, y}) {
         socket.emit('emit_drawing', {ox, oy, x, y})
     }
